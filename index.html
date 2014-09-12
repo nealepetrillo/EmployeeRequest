@@ -12,10 +12,17 @@
 		<!-- End Meta Data -->
 		
 		<!-- Link External Content -->
+		<link rel="stylesheet" type="text/css" href="resources/css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="resources/css/common.css">
 		<link rel="stylesheet" type="text/css" href="resources/css/index.css">
+		<link rel="stylesheet" type="text/css" href="resources/css/tooltipster.css" />
 		
 		<script type="text/javascript" src="resources/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="resources/js/additional-methods.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery.tooltipster.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery.mask.min.js"></script>
+		<script type="text/javascript" src="resources/js/index.js"></script>
 		<!-- End Linked Content -->
 		
 	</head>
@@ -41,87 +48,92 @@
 			
 			<!-- Define Page Body -->
 			<div id="indexBody" class="pageBody">
-				<p>Please fill the form below for processing. All fields are required.</p>
-				
-				<form id="indexForm" autocomplete="on">
-					<label for="name">Employee Name:</label>
-					<input type="text" name="name" id="name"><br>
+				<div id="formContainer">
+					<p>Please fill the form below for processing. All fields are required.</p>
 					
-					<label for="idNumber">Employee Number:</label>
-					<input type="text" name="idNumber" id="idNumber"><br>
-					
-					<label for="phoneNumber">Phone Number:</label>
-					<input type="text" name="phoneNumber" id="phoneNumber"><br>
-					
-					<label for="street">Address:</label>
-					<input type="text" name="street" id="street"><br>
-					
-					<label for="city">City:</label>
-					<input type="text" name="city" id="city"><br>
-					
-					<label for="state">State:</label>
-					<select id="state">
-						<option value="AL">Alabama</option>
-						<option value="AK">Alaska</option>
-						<option value="AZ">Arizona</option>
-						<option value="AR">Arkansas</option>
-						<option value="CA">California</option>
-						<option value="CO">Colorado</option>
-						<option value="CT">Connecticut</option>
-						<option value="DE">Delaware</option>
-						<option value="DC">District Of Columbia</option>
-						<option value="FL">Florida</option>
-						<option value="GA">Georgia</option>
-						<option value="HI">Hawaii</option>
-						<option value="ID">Idaho</option>
-						<option value="IL">Illinois</option>
-						<option value="IN">Indiana</option>
-						<option value="IA">Iowa</option>
-						<option value="KS">Kansas</option>
-						<option value="KY">Kentucky</option>
-						<option value="LA">Louisiana</option>
-						<option value="ME">Maine</option>
-						<option value="MD">Maryland</option>
-						<option value="MA">Massachusetts</option>
-						<option value="MI">Michigan</option>
-						<option value="MN">Minnesota</option>
-						<option value="MS">Mississippi</option>
-						<option value="MO">Missouri</option>
-						<option value="MT">Montana</option>
-						<option value="NE">Nebraska</option>
-						<option value="NV">Nevada</option>
-						<option value="NH">New Hampshire</option>
-						<option value="NJ">New Jersey</option>
-						<option value="NM">New Mexico</option>
-						<option value="NY">New York</option>
-						<option value="NC">North Carolina</option>
-						<option value="ND">North Dakota</option>
-						<option value="OH">Ohio</option>
-						<option value="OK">Oklahoma</option>
-						<option value="OR">Oregon</option>
-						<option value="PA">Pennsylvania</option>
-						<option value="RI">Rhode Island</option>
-						<option value="SC">South Carolina</option>
-						<option value="SD">South Dakota</option>
-						<option value="TN">Tennessee</option>
-						<option value="TX">Texas</option>
-						<option value="UT">Utah</option>
-						<option value="VT">Vermont</option>
-						<option value="VA">Virginia</option>
-						<option value="WA">Washington</option>
-						<option value="WV">West Virginia</option>
-						<option value="WI">Wisconsin</option>
-						<option value="WY">Wyoming</option>
-					</select><br>
-					
-					<label for="zip">Zip:</label>
-					<input type="text" name="zip" id="zip"><br>
-					
-					<label for="currentEmployee">Are you a current employee of NealeCo?</label>
-					<input type="checkbox" name="currentEmployee" id="currentEmployee" value="true"><br>
-					
-					<input type="submit" name="submit" id="submit">
-				</form>
+					<form id="indexForm" autocomplete="on">
+						<label for="name">Employee Name:</label>
+						<input type="text" name="name" id="name"><br>
+						
+						<label for="idNumber">Employee Number:</label>
+						<input type="text" name="idNumber" id="idNumber"><br>
+						
+						<label for="phoneNumber">Phone Number:</label>
+						<input type="text" name="phoneNumber" id="phoneNumber"><br>
+						
+						<label for="street">Address:</label>
+						<input type="text" name="street" id="street"><br>
+						
+						<label for="city">City:</label>
+						<input type="text" name="city" id="city"><br>
+						
+						<label for="state">State:</label>
+						<select id="state">
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District Of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select><br>
+						
+						<label for="zip">Zip:</label>
+						<input type="text" name="zip" id="zip"><br>
+						
+						<label for="currentEmployee">Are you a current employee of NealeCo?</label>
+						<input type="checkbox" name="currentEmployee" id="currentEmployee" value="true"><br>
+						
+						<input type="submit" name="submit" id="submit">
+					</form>
+				</div>
+				<div id="formConfirmation">
+					<p>Thanks for submitting!</p>
+				</div>
 			</div>
 			<!-- End Page Body -->
 			
