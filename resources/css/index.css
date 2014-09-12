@@ -1,0 +1,51 @@
+/* 
+ * This file is designed to provide specific styling for elements on index.html
+ *
+ */
+
+/** Container elements **/
+#indexBody {
+
+}
+
+#indexForm {
+	width: 80%;
+	margin: 0 0 0 0;
+}
+
+#indexForm label, input, submit {
+	display: inline-block;
+}
+
+#indexForm label {
+	width: 30%;
+	text-align: right;
+}
+
+#indexForm input {
+	width: 30%;
+	margin: 0 25% 0 4%;
+}
+
+#indexForm select {
+	width: 30.75%;
+	margin: 0 25% 0 4%;
+}
+
+#indexForm #currentEmployee {
+	width: 1em;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0
+}
+
+#indexForm [for = currentEmployee] {
+	width: 50%;
+	
+	margin: 1em 0 1em 0;
+}
+#submit {
+	display: block;
+	width: 30%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
